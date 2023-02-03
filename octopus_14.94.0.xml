@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote alias="repo" fetch="https://git.toradex.com" name="tdx"/>
+  
+  <include name="agl-repo/octopus_14.94.0.xml"/>
+  
+  
+  <!-- consolidate on meta-freescale from git.yoctoproject.org -->
+  <extend-project name="meta-freescale" revision="bef0618a2b9727880e62944395ea771dded431c8" />
+  <extend-project name="Freescale/meta-freescale-3rdparty" revision="2c48a30847dc0f4a3a1505c462387578ea49065f" />
+  
+  <!-- toradex bsps -->
+  <project name="meta-toradex-bsp-common.git" path="bsp/meta-toradex-bsp-common" remote="tdx" revision="0ff230d84824c0ebf34e1f08ed2dd5811c17cd11" upstream="kirkstone-6.x.y"/>
+  <project name="meta-toradex-nxp.git" path="bsp/meta-toradex-nxp" remote="tdx" revision="a174b6faada51c7e196c39c7a0f914754e8fa41d" upstream="kirkstone-6.x.y"/>
+  
+</manifest>
