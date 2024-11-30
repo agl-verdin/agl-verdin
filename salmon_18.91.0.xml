@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote alias="repo" fetch="https://git.toradex.com" name="tdx"/>
+  
+  <include name="agl-repo/salmon_18.91.0.xml"/>
+  
+  
+  <!-- consolidate on meta-freescale from git.yoctoproject.org -->
+  <extend-project name="meta-freescale" revision="585b40d35db75ebe93482c8951ef0827435f7b6f" />
+  <extend-project name="Freescale/meta-freescale-3rdparty" revision="6c063450d464eb2f380443c7d9af1b94ce9b9d75" />
+  <extend-project name="meta-arm" revision="60e31ef2c4983c0bdb8682dee6a6ec5f2e9d5f0a" />
+  
+  <!-- toradex bsps taken reference from toradex repo-->
+  <project name="meta-toradex-bsp-common.git" path="bsp/meta-toradex-bsp-common" remote="tdx" revision="6cdf564762805ec382409a2ba23d33bcde5bec9f" upstream="scarthgap-7.x.y"/>
+  <project name="meta-toradex-nxp.git" path="bsp/meta-toradex-nxp" remote="tdx" revision="c6c49e30fb8660768830b8fab9e48e4f5b2bc5d3" upstream="scarthgap-7.x.y"/>
+  
+
+  <!-- Remove repos that are not required for toradex verdin boards -->
+  <remove-project name="renesas-rcar/meta-renesas" />
+  <remove-project name="CogentEmbedded/meta-rcar" />
+  <remove-project name="AGL/meta-agl-refhw" />
+
+  <remove-project name="meta-ti" />
+
+  <remove-project name="meta-raspberrypi" />
+  <remove-project name="meta-lts-mixins" />
+
+  <remove-project name="SanCloudLtd/meta-sancloud" />
+  <remove-project name="EmbeddedAndroid/meta-rtlwifi" />
+
+  <remove-project name="sifive/meta-sifive" />
+
+  <remove-project name="riscv/meta-riscv" />
+
+  <reomve-project name="OE4T/meta-tegra" />
+
+  <remove-project name="JeffyCN/meta-rockchip" />
+  <remove-project name="agl-ic-eg/meta-rockchip-extra" />
+
+</manifest>
