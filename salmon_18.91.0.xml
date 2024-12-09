@@ -2,7 +2,8 @@
 <manifest>
 
   <remote alias="repo" fetch="https://git.toradex.com" name="tdx"/>
-  
+  <remote alias="repo" fetch="https://github.com/agl-verdin/" name="agl-verdin"/>
+
   <include name="agl-repo/salmon_18.91.0.xml"/>
   
   
@@ -15,6 +16,8 @@
   <project name="meta-toradex-bsp-common.git" path="bsp/meta-toradex-bsp-common" remote="tdx" revision="6cdf564762805ec382409a2ba23d33bcde5bec9f" upstream="scarthgap-7.x.y"/>
   <project name="meta-toradex-nxp.git" path="bsp/meta-toradex-nxp" remote="tdx" revision="c6c49e30fb8660768830b8fab9e48e4f5b2bc5d3" upstream="scarthgap-7.x.y"/>
   
+  <!-- Meta repo to verdin machine from toradex bsp layer -->
+  <project name="meta-agl-verdin" remote="agl-verdin" revision="94feda53ab37f93f63c7d88de1181d6aeefc76d6" upstream="master" />
 
   <!-- Remove repos that are not required for toradex verdin boards -->
   <remove-project name="renesas-rcar/meta-renesas" />
