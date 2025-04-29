@@ -13,7 +13,7 @@
   <remote name="qtio" fetch="https://code.qt.io/" />
 
   <!-- defaults -->
-  <default remote="agl" sync-j="4" revision="salmon"/>
+  <default remote="agl" sync-j="4" revision="refs/tags/salmon/19.0.1"/>
 
 
   <!-- CORE -->
