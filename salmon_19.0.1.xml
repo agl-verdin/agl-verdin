@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote alias="repo" fetch="https://git.toradex.com" name="tdx"/>
+  <remote alias="repo" fetch="https://github.com/agl-verdin/" name="agl-verdin"/>
+
+  <include name="agl-repo/salmon_19.0.1.xml"/>
+  
+  
+  <!-- consolidate on meta-freescale from git.yoctoproject.org -->
+  <extend-project name="meta-freescale" revision="f52fe2b709e70d1d864adfad2754213bce7abcd7" />
+  <extend-project name="Freescale/meta-freescale-3rdparty" revision="70c83e96c7f75e73245cb77f1b0cada9ed4bbc6d" />
+  <extend-project name="meta-arm" revision="f3640941c600d03ea53ce5b9254f0fead18f8bc0" />
+  
+  <!-- toradex bsps taken reference from toradex repo-->
+  <project name="meta-toradex-bsp-common.git" path="bsp/meta-toradex-bsp-common" remote="tdx" revision="9871129967bf7b554bbb6430703847ec204511ce" upstream="scarthgap-7.x.y"/>
+  <project name="meta-toradex-nxp.git" path="bsp/meta-toradex-nxp" remote="tdx" revision="6980a5e91e17ac4e24c47ceb5fdaddea011f089b" upstream="scarthgap-7.x.y"/>
+  
+  <!-- Meta repo to verdin machine from toradex bsp layer -->
+  <project name="meta-agl-verdin" remote="agl-verdin" revision="94feda53ab37f93f63c7d88de1181d6aeefc76d6" upstream="master" />
+
+  <!-- Remove repos that are not required for toradex verdin boards -->
+  <remove-project name="renesas-rcar/meta-renesas" />
+  <remove-project name="CogentEmbedded/meta-rcar" />
+  <remove-project name="AGL/meta-agl-refhw" />
+
+  <remove-project name="meta-ti" />
+
+  <remove-project name="meta-raspberrypi" />
+  <remove-project name="meta-lts-mixins" />
+
+  <remove-project name="SanCloudLtd/meta-sancloud" />
+  <remove-project name="EmbeddedAndroid/meta-rtlwifi" />
+
+  <remove-project name="sifive/meta-sifive" />
+
+  <remove-project name="riscv/meta-riscv" />
+
+  <reomve-project name="OE4T/meta-tegra" />
+
+  <remove-project name="JeffyCN/meta-rockchip" />
+  <remove-project name="agl-ic-eg/meta-rockchip-extra" />
+
+</manifest>
